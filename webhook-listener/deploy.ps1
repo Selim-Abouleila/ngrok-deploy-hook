@@ -35,7 +35,7 @@ if ($npmScripts -match "\sstart\s") {
 } 
 # if we built our React app app with vite
 elseif ($npmScripts -match "\sdev\s") { 
-  Start-Process -FilePath "npm" -ArgumentList "run","dev","--","--host","0.0.0.0" -RedirectStandardOutput "app.log" -RedirectStandardError "app.err.log" 
+  Start-Process -FilePath "npm" -ArgumentList "run","start","--","--host","0.0.0.0" -RedirectStandardOutput "app.log" -RedirectStandardError "app.err.log" 
   Write-Host "Started with: npm run dev" 
 } 
 else { 
